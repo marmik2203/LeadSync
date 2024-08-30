@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lead Sync</title>
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Vertical Navbar -->
+        <nav class="vertical-navbar">
+            <p class="navbar-brand" href="#">Lead Sync</p>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <img src="../pic/dashboardlogo.jpeg" alt="Dashboard Icon" class="nav-icon" /> DashBoard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../pic/globalconfiglogo.jpeg" alt="Global Config Icon" class="nav-icon" /> Global Config
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../pic/leadslogo.jpeg" alt="Leads Icon" class="nav-icon" /> Leads
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../pic/datalogo.jpeg" alt="Data Icon" class="nav-icon" /> Data
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../pic/projectslogo.jpeg" alt="Projects Icon" class="nav-icon" /> Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../pic/propertieslogo.jpeg" alt="Properties Icon" class="nav-icon" /> Properties
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../pic/reportslogo.jpeg" alt="Reports Icon" class="nav-icon" /> Reports
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../pic/attendancelogo.jpeg" alt="Attendance Icon" class="nav-icon" /> Attendance
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../pic/tasklogo.jpeg" alt="Tasks Icon" class="nav-icon" /> Tasks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="../pic/teamlogo.jpeg" alt="Team Icon" class="nav-icon" /> Team
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="content">
+            <!-- Horizontal Navbar -->
+            <nav class="horizontal-navbar">
+                <div class="navbar-left">
+                    <label class="dropdown-label">Training Sales PVT LTD</label>
+                    <div class="dropdown">
+                        <button class="dropbtn">Organization Dashboard</button>
+                        <div class="dropdown-content">
+                            <a href="#">Option 1</a>
+                            <a href="#">Option 2</a>
+                            <a href="#">Option 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">My Team</button>
+                        <div class="dropdown-content">
+                            <a href="#">Option A</a>
+                            <a href="#">Option B</a>
+                            <a href="#">Option C</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <label class="checkbox-container">
+            <input type="checkbox" />
+            <span class="checkmark">With Team</span>
+          </label>
+                </div>
+            </nav>
+            <div class="content">
+                <!-- New Horizontal Navbar -->
+                <nav class="stats-navbar">
+                    <div class="stats-item">
+                        <span class="label">Total Leads</span>
+                        <span class="value" id="totalLeads">2219</span>
+                    </div>
+                    <div class="stats-item">
+                        <span class="label">Active Leads</span>
+                        <span class="value" id="activeLeads">1831</span>
+                    </div>
+                    <div class="stats-item">
+                        <span class="label">Unassigned Leads</span>
+                        <span class="value" id="unassignedLeads">2</span>
+                    </div>
+                    <div class="stats-item">
+                        <span class="label">Deleted Leads</span>
+                        <span class="value" id="deletedLeads">309</span>
+                    </div>
+                    <div class="stats-item">
+                        <span class="label">Booked Leads</span>
+                        <span class="value" id="bookedLeads">28</span>
+                    </div>
+                    <div class="stats-item">
+                        <span class="label">Booking Cancel</span>
+                        <span class="value" id="bookingCancel">3</span>
+                    </div>
+                    <div class="stats-item">
+                        <span class="label">Not Interested</span>
+                        <span class="value" id="notInterested">17</span>
+                    </div>
+                    <div class="stats-item">
+                        <span class="label">Dropped Leads</span>
+                        <span class="value" id="droppedLeads">57</span>
+                    </div>
+                </nav>
+
+                <!-- New Horizontal Navbar for Lead Stats -->
+                <!-- <nav class="lead-stats-navbar">
+            <div class="lead-stats-item">
+              <span class="label">New Leads</span>
+              <span class="value" id="newLeads">7</span>
+            </div>
+            <div class="lead-stats-item">
+              <span class="label">Pending Leads</span>
+              <span class="value" id="pendingLeads">1129</span>
+            </div>
+            <div class="lead-stats-item">
+              <span class="label">callbacks</span>
+              <span class="value" id="callBacks">327</span>
+            </div>
+            <div class="lead-stats-item">
+              <span class="label">Meeting Scheduled</span>
+              <span class="value" id="meetingScheduled">0</span>
+            </div>
+            <div class="lead-stats-item">
+              <span class="label">Site Visit Scheduled</span>
+              <span class="value" id="siteVisitScheduled">1</span>
+            </div>
+            <div class="lead-stats-item">
+              <span class="label">Overdue</span>
+              <span class="value" id="overDue">560</span>
+            </div>
+          </nav> -->
+
+                <div class="lead-ring">
+                    <canvas id="leadChart"></canvas>
+                </div>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!-- Right Side Navbar -->
+        <div class="right-navbar">
+            <div class="profile-button">
+                <img src="../pic/user_icon.jpg" alt="Profile Picture" />
+            </div>
+            <div class="reminders">
+                <h3>Reminders</h3>
+                <!-- Calendar integration -->
+                <div class="calendar">
+                    <div class="header">
+                        <select id="year-select"></select>
+                        <select id="month-select"></select>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calendar-body">
+                            <!-- Calendar dates will be generated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <script src="../JS/chart.js"></script>
+    <script src="../JS/calender.js"></script>
+</body>
+
+</html>
